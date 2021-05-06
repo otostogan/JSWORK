@@ -12,13 +12,13 @@ console.log(num);
 
 
 
-function calc(a, b){
-    return(a + b);
-}
+// function calc(a, b){
+//     return(a + b);
+// }
 
-console.log(calc(23, 33));
-console.log(calc(323, 33));
-console.log(calc(23, 33));
+// console.log(calc(23, 33));
+// console.log(calc(323, 33));
+// console.log(calc(23, 33));
 
 function ret(){
     let num = 50;
@@ -31,3 +31,7 @@ console.log(anotherNum);
 const logger = function(){
     console.log('hello');
 };
+
+logger();
+
+const calc = (a, b) => a + b;
