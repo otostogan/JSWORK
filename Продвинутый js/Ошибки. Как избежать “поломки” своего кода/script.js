@@ -9,6 +9,8 @@ try{
     console.log(error.name);
     console.log(error.message);
     console.log(error.stack);
+} finally{
+    
 }
 
 console.log('still normal');
