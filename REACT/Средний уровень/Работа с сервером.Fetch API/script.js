@@ -1,9 +1,32 @@
-const  getResource = async (url) => {
-    const res = await fetch(url),
-          some = await res.json();
+class GotServices{
 
-    return some;
+    constructor(){
+        this._apiBase = 'https://www.anapioficeandfire.com/api';
+    }
+
+    async getResource(url){
+        const res = await fetch(`${this._apiBase}${url}`);
+    
+        if(!res.ok){
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+
+        return await res.json();;
+    }
+    getAllCharacters(){
+        return this.getResource("/characters?page=5&pageSize=10");
+    }
+    getCharacter(id){
+        return this.getResource(`/characters/${id}`);
+    }
 }
-getResource('https://jsonplaceholder.typicode.com/todos/10000')
-    .then((res)=>console.log('succes',res))
-    .catch(error => console.error('error', error));
+
+const got = new GotServices();
+
+got.getAllCharacters()
+    .then(res => {
+        res.forEach(item => console.log(item.name));
+    });
+
+got.getCharacter(130)
+    .then(res => console.log(res));
