@@ -1,2 +1,2 @@
-import RowBlonk from './rowBlock'
-export default RowBlonk
+import RowBlock from './rowBlock';
+export default RowBlock;
