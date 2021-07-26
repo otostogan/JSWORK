@@ -1,9 +1,13 @@
 import React from 'react';
+import './post-list-item.sass';
 
 
 export default class PostListItem extends React.Component {
+
     render() {
-        const {label, onDelete, onToggleImportant, onToggleLiked, important, like} = this.props;
+        const {label, onDelete, onToggleLiked, onToggleImpornant, important,like} = this.props;
+    
+
         let classNames = 'app-list-item d-flex justify-content-between';
         if(important){
             classNames += ' important';
@@ -11,19 +15,25 @@ export default class PostListItem extends React.Component {
         if(like){
             classNames += ' like';
         }
-        return (
+
+        return ( 
             <div className={classNames}>
-                <span className="app-list-item-label" onClick={onToggleLiked}>
+                <span onClick={onToggleLiked} className="app-list-item-label">
                     {label}
                 </span>
                 <div className="d-flex justify-content-center align-items-center">
                     <button
-                    onClick={onToggleImportant}
-                    type="button" className="btn-star btn-sm">
+                    type='button' 
+                    className="btn-star btn-sm"
+                    onClick={onToggleImpornant}
+                    >
                         <i className="fa fa-star"></i>
                     </button>
-                    <button type="button" className="btn-trash btn-sm"
-                    onClick={onDelete}>
+                    <button 
+                    type='button' 
+                    className="btn-trash btn-sm"
+                    onClick={onDelete}
+                    >
                         <i className="fa fa-trash"></i>
                     </button>
                     <i className="fa fa-heart"></i>

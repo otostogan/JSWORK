@@ -23,14 +23,15 @@
 // console.log(addTen(41));
 
 
-function urlGenerator(domain) {
-    return function(url){
-        return `https://${url}.${domain}`
-    }
-}
+// function urlGenerator(domain) {
+//     return function(url){
+//         return `https://${url}.${domain}`
+//     }
+// }
 
-const comUlr = urlGenerator('com')
-const ruUrl = urlGenerator('ru')
+// const comUlr = urlGenerator('com')
+// const ruUrl = urlGenerator('ru')
 
-console.log(comUlr('vk'));
-console.log(ruUrl('vk'));
+// console.log(comUlr('vk'));
+// console.log(ruUrl('vk'));
+

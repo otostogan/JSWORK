@@ -1,0 +1,100 @@
+body
+    position: relative
+
+.modal
+    display: none
+    position: fixed
+    top: 0
+    z-index: 300
+    width: 100%
+    height: 100%
+    background: rgba(144, 119, 240, 0.4)
+    overflow: auto
+    &__dialog
+        max-width: 1300px
+        margin: 100px auto
+    &__content
+        width: 520px
+        margin: 0 auto
+        background: #2A2A2A
+        box-shadow: 0px 0px 20px #000000
+        padding: 75px 85px 80px 
+        position: relative
+        &-title
+            font-size: 30px
+            font-weight: 700
+            color: #9077F0 
+            text-align: center
+            text-transform: uppercase
+
+        &-subtitle
+            font-size: 17px
+            font-weight: 400
+            line-height: 25px
+            color: #ffffff
+    &__close
+        cursor: pointer
+        position: absolute
+        top: 20px   
+        right: 20px
+        color: #FFFFFF
+        font-size: 25px
+    &__form
+        margin-top: 25px
+        &-input
+            width: 100%
+            height: 25px
+            padding-left: 20px
+            color: #FFFF
+            background-color: #2A2A2A
+            border: none
+            outline: none   
+            margin-bottom: 15px
+            border-bottom: 1px solid #5C5C5C
+        button
+            width: 100%
+            height: 55px
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #fff
+            color: #000 
+            font-size: 15px
+            font-weight: 500
+            text-transform: uppercase
+            margin-top: 30px
+            border: none
+            overflow: hidden
+            transition: 1s all ease
+            position: relative
+            z-index: 1
+            outline: none
+            &::before 
+                // z-index: 10
+                background: #9077f0
+                content: ""
+                position: absolute
+                top: 50%
+                left: 50%
+                z-index: -1
+                transition: all .6s ease
+            &:hover
+                color: #fff
+            
+.mbn
+    margin-bottom: 0 !important
+                
+.btn3::before
+  width: 100%
+  height: 0%
+  transform: translate(-50%,-50%) rotate(45deg)
+
+.btn3:hover::before
+  height: 380%
+
+.show
+    display: block
+
+.advantages__form-warning
+    color: #fff
+    text-align: center
