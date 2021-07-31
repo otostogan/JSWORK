@@ -62,7 +62,6 @@ const forms = (state) => {
                         });
                         document.body.style.overflow = '';
                         Object.keys(state).forEach( k => delete state[k]);
-                        console.log(state);
                     }, 3000);
                 });
 
