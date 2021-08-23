@@ -30,7 +30,7 @@ export default class MainSlider extends Slider {
 
         this.slides.forEach(slide=>{
             slide.style.display = 'none';
-            slide.classList.add('animated');
+            slide.classList.add('animated', 'fadeInLeftBig');
         });
         this.slides[this.slideIndex-1].style.display = 'block';
     }
@@ -43,9 +43,6 @@ export default class MainSlider extends Slider {
         this.btns.forEach(btn => {
             btn.addEventListener('click', ()=>{
                 this.plusSlides(1);
-                if(btn.classList.contains('next')){
-                    this.slides[this.slideIndex - 1].classList.add('fadeInLeftBig');
-                }
             });
             btn.parentNode.previousElementSibling.addEventListener('click', (e)=>{
                 e.preventDefault();
