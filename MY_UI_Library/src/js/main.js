@@ -14,4 +14,4 @@ $('.wrapper div').click(function() {
 
 // console.log($('.some').closest('.findme'));
 
-console.log($('.findme').siblings());
+$('button').fadeIn(1000);
